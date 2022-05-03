@@ -2,15 +2,14 @@ import React from "react";
 import {
   Switch,
   useRouteMatch,
-  useParams,
   Route,
 } from "react-router-dom";
+import CardForm from "./CardForm";
 import Deck from "./Deck";
 import EditDeck from "./EditDeck";
 import Study from "./Study";
 
 const Decks = ({ fetchDecks }) => {
-  const { deckId } = useParams();
   const { path } = useRouteMatch();
 
     return (
@@ -25,10 +24,10 @@ const Decks = ({ fetchDecks }) => {
           <EditDeck fetchDecks={fetchDecks} />
         </Route>
         <Route path={`${path}/cards/new`}>
-          <h2>New</h2>
+          <CardForm fetchDecks={fetchDecks} />
         </Route>
         <Route path={`${path}/cards/:cardId/edit`}>
-          <h2>Edit Card</h2>
+          <CardForm fetchDecks={fetchDecks} />
         </Route>
       </Switch>
     );

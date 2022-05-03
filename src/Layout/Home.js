@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import DeckEntry from "./DeckEntry";
 import { listDecks } from "../utils/api/index";
-import { Switch, Route, useRouteMatch, Link } from "react-router-dom";
-import Study from "./Study";
+import { Switch, Route, Link } from "react-router-dom";
 import CreateDeck from "./CreateDeck";
 import Decks from "./Decks";
 
 const Home = () => {
   const [decks, setDecks] = useState([]);
+
 
   const fetchDecks = async () => {
     const res = await listDecks();

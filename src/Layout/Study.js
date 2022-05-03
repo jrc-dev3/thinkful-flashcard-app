@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
-import {
-  Route,
-  useRouteMatch,
-  useParams,
-  Link,
-  useHistory,
-} from "react-router-dom";
-import { listDecks, readDeck } from "../utils/api";
+import { useRouteMatch, useParams, Link, useHistory } from "react-router-dom";
+import { readDeck } from "../utils/api";
 
 const Study = () => {
   const [deck, setDeck] = useState({});
@@ -14,6 +8,7 @@ const Study = () => {
   const [flipped, setFlipped] = useState(false);
   const { deckId } = useParams();
   const history = useHistory();
+  const { url } = useRouteMatch();
 
   const fetchDeck = async () => {
     const res = await readDeck(deckId);
@@ -81,7 +76,11 @@ const Study = () => {
                   {deck.cards.length} cards in this deck.
                 </p>
 
-                <button onClick={() => setFlipped(!flipped)}>
+                <button
+                  onClick={() =>
+                    history.push(url.replace("study", "cards/new"))
+                  }
+                >
                   + Add Cards
                 </button>
               </React.Fragment>

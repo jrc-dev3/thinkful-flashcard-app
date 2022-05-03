@@ -1,8 +1,7 @@
 import React from "react";
-import { deleteCard, deleteDeck } from "../utils/api/index";
+import { deleteCard } from "../utils/api/index";
 import { Link } from "react-router-dom";
 import { useRouteMatch } from "react-router-dom";
-import { useHistory } from "react-router-dom";
 
 const CardEntry = ({ card, getDeck}) => {
   const { url } = useRouteMatch()
