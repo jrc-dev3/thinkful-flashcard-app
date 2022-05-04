@@ -113,6 +113,12 @@
       "back": "etete",
       "deckId": 3,
       "id": 20
+    },
+    {
+      "front": "testt",
+      "back": "test 2",
+      "deckId": 1,
+      "id": 21
     }
   ]
 }

@@ -57,12 +57,12 @@ const CardForm = ({ type, fetchDecks }) => {
       <div>
         <p>
           <Link to="/">Home</Link>{" "}
-          {`/ ${deck.name} / ${cardId ? "Edit" : "Add"} Card`}
+          {`/ ${deck.name} /`} <span>{`${cardId ? "Edit Card" : "Add Card"} `}</span> 
         </p>
       </div>
 
       <section>
-        <h2>{`${deck.name}: ${cardId ? "Edit" : "Add"} Card`}</h2>
+        <h2><span>{`${deck.name}`}</span>: {`${cardId ? "Edit Card" : "Add Card"} `}</h2>
         <article>
           <label>Front</label>
           <br />

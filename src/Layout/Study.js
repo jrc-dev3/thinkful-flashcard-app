@@ -47,7 +47,9 @@ const Study = () => {
         </div>
 
         <section>
-          <h2>Study: {deck.name}</h2>
+          <h2>
+            Study: <span>{deck.name}</span>
+          </h2>
           <article>
             {deck.cards.length > 2 && (
               <React.Fragment>
@@ -61,9 +63,12 @@ const Study = () => {
                 </p>
                 <span>
                   <button onClick={() => setFlipped(!flipped)}>Flip</button>
-                  <button onClick={handleNext}>
-                    {cardCounter === deck.cards.length ? "Restart" : "Next"}
-                  </button>
+
+                  {flipped && (
+                    <button onClick={handleNext}>
+                      {cardCounter === deck.cards.length ? "Restart" : "Next"}
+                    </button>
+                  )}
                 </span>
               </React.Fragment>
             )}

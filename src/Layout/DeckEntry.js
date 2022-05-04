@@ -2,7 +2,7 @@ import React from "react";
 import { deleteDeck } from "../utils/api/index";
 import { Link } from "react-router-dom";
 
-const DeckEntry = ({deck, fetchDecks}, ) => {
+const DeckEntry = ({deck, fetchDecks, cardCount}, ) => {
   const { id, name, description } = deck;
 
   const handleDelete = async () => {
@@ -14,7 +14,7 @@ const DeckEntry = ({deck, fetchDecks}, ) => {
   }
   return (
     <section>
-      <h2>{name}</h2>
+      <h2>{name} <span><sup>{deck.cards.length} cards</sup></span></h2>
       <p>{description}</p>
       <div>
         <Link to={`/decks/${id}`}><button>View</button></Link>
