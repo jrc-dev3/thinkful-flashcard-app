@@ -9,23 +9,26 @@
       "name": "React Router",
       "description": "React Router is a collection of navigational components that compose declaratively with your application.",
       "id": 2
-    },
-    {
-      "name": "test",
-      "description": "test",
-      "id": 3
     }
   ],
   "cards": [
     {
-      "front": "How do you modify the state of a different React component?",
-      "back": "Not at all! State is visible to the component only. test",
-      "id": 2
+      "id": 1,
+      "front": "Differentiate between Real DOM and Virtual DOM.",
+      "back": "Virtual DOM updates are faster but do not directly update the HTML",
+      "deckId": 1
     },
     {
+      "id": 2,
+      "front": "How do you modify the state of a different React component?",
+      "back": "Not at all! State is visible to the component only.",
+      "deckId": 1
+    },
+    {
+      "id": 3,
       "front": "How do you pass data 'down' to a React child component?",
-      "back": "As properties or props.",
-      "id": 3
+      "back": "As properties or props",
+      "deckId": 1
     },
     {
       "front": "What path will match the follow Route?\n<Route>\n  <NotFound />\n</Route>",
@@ -34,91 +37,17 @@
       "id": 4
     },
     {
-      "front": "test",
-      "back": "test test",
-      "id": 6
-    },
-    {
-      "front": "test",
-      "back": "test test",
-      "id": 7
-    },
-    {
-      "front": "test test",
-      "back": " test ",
-      "id": 8
-    },
-    {
-      "front": "test",
-      "back": "test etst",
-      "id": 9
-    },
-    {
-      "front": "test",
-      "back": "test 2",
-      "id": 10
-    },
-    {
-      "front": "test",
-      "back": "test2",
-      "id": 11
-    },
-    {
-      "front": "test",
-      "back": "test23",
-      "id": 12
-    },
-    {
-      "front": "est",
-      "back": "test",
+      "front": "What does <Switch> do?",
+      "back": "Renders the first matching child <Route> ",
       "deckId": 2,
-      "id": 13
+      "id": 5
     },
     {
-      "front": "test",
-      "back": "test2",
-      "id": 14
-    },
-    {
-      "front": "last",
-      "back": "last test",
-      "id": 15
-    },
-    {
-      "front": "test",
-      "back": "test test",
+      "cards": [],
+      "front": "b",
+      "back": "b",
       "deckId": 1,
-      "id": 16
-    },
-    {
-      "front": "tester",
-      "back": "tester est",
-      "deckId": 1,
-      "id": 17
-    },
-    {
-      "front": "test",
-      "back": "test test test",
-      "deckId": 3,
-      "id": 18
-    },
-    {
-      "front": "tet",
-      "back": "tetetete",
-      "deckId": 3,
-      "id": 19
-    },
-    {
-      "front": "tetetet",
-      "back": "etete",
-      "deckId": 3,
-      "id": 20
-    },
-    {
-      "front": "testt",
-      "back": "test 2",
-      "deckId": 1,
-      "id": 21
+      "id": 7
     }
   ]
 }
